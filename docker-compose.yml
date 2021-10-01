@@ -1,25 +1,12 @@
 version: '3.9'
 services:
   nextapp:
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
+    image: romanshe/nginx-with-next
     ports:
-      - '4000:3050'
-    volumes:
-      - /nextapp/node_modules
-      - .:/nextapp
+      - '80:80'
     deploy:
       restart_policy:
         condition: on-failure
         delay: 5s
         max_attempts: 3
         window: 120s
-  tests:
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
-    volumes:
-      - /nextapp/node_modules
-      - .:/nextapp
-    command: ['npm', 'run', 'test']
