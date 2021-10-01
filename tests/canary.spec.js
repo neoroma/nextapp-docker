@@ -3,5 +3,5 @@ test('canary', () => {
 })
 
 test('canary false', () => {
-  expect(2 + 22).toBe(4)
+  expect(2 + 2).toBe(4)
 })
