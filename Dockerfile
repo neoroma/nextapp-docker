@@ -10,5 +10,5 @@ RUN npm run build
 RUN npm run export
 
 FROM nginx
-
+EXPOSE 80
 COPY --from=build /nextapp/exported-webapp /usr/share/nginx/html
