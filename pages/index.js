@@ -13,6 +13,8 @@ export default function Home() {
       <main className={styles.main}>
         <h1>Ilus ilm on</h1>
         <h1>☀️☀️☀️</h1>
+
+        <h2>I am the feature and want to be merged</h2>
       </main>
 
       <footer className={styles.footer}>Powered by Roman</footer>
